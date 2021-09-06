@@ -47,7 +47,7 @@ namespace ControleEstoque.Classes
         }
         public void Frase()
         {
-            Console.WriteLine($"Id: {Id}, Nome: {Nome}, Valor: {Valor}, {Quant} unidades," +
+            Console.WriteLine($"Id: {Id}, Nome: {Nome}, Marca: {Marca}, Valor: {Valor}, {Quant} unidades," +
                 $" valor total:{TotalValue().ToString(CultureInfo.InvariantCulture)}");
         }
 
