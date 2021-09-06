@@ -12,6 +12,7 @@ namespace ControleEstoque.Classes
         public string Nome;
         public double Valor;
         public int Quant;
+        public string Marca;
         public int Id { get; set; }
 
         public void AddQuant(int qnt)

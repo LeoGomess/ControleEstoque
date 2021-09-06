@@ -28,6 +28,12 @@ namespace ControleEstoque
                     a.Valor = double.Parse(Console.ReadLine());
                     Console.Write("Quantidade: ");
                     a.Quant = int.Parse(Console.ReadLine());
+                    Console.Write("Marca: ");
+                    a.Marca = Console.ReadLine();
+
+                    a.Id = GeraIdProduto(lst);
+
+
                     lst.Add(a);
                     a.Frase();
                 }
@@ -111,6 +117,32 @@ namespace ControleEstoque
 
             }
             return null;
+        }
+        public static int GeraIdProduto(List<Product> lst)
+        {
+            List<int> lstInt = new List<int>();
+            int maior = 1;
+
+            foreach (var item in lst)
+            {
+                lstInt.Add(item.Id);
+            }
+
+            maior = PegaMaiorNumero(lstInt);
+
+            return maior + 1;
+        }
+        public static int PegaMaiorNumero(List<int> lst)
+        {
+            int maior = 0;
+            foreach (int item in lst)
+            {
+                if (item > maior)
+                {
+                    maior = item;
+                }
+            }
+            return maior;
         }
     }
 }
