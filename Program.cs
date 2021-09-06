@@ -178,6 +178,29 @@ namespace ControleEstoque
                             }
 
                             break;
+                        case "3":
+                            foreach (var item in lst)
+                            {
+                                Console.WriteLine("ID: " + item.Id);
+                                Console.WriteLine("Nome:" + item.Nome);
+                                Console.WriteLine("----------");
+                            }
+                            Console.WriteLine("Digite o ID do produto:");
+                            string termoPesquisaPorId = Console.ReadLine();
+
+                            var produtoEncontradoPorId = BuscaProdutoPorId(lst, termoPesquisaPorId);
+                            if (produtoEncontradoPorId != null)
+                            {
+                                Console.WriteLine();
+                                Console.WriteLine("Produto encontrado:");
+                                produtoEncontradoPorId.Frase();
+                            }
+                            else
+                            {
+                                MensagemErro($"Nenhum produto do ID {termoPesquisaPorId} encontrado!");
+                            }
+                            break;
+
                     }
 
                 }
