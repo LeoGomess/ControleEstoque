@@ -129,6 +129,7 @@ namespace ControleEstoque
                 }
                 else if(resultado == "5")
                 {
+                    MostrarProdutos(lst, true);
                     Console.WriteLine("1. Buscar por nome");
                     Console.WriteLine("2. Buscar por categoria");
                     Console.WriteLine("0. Cancelar");
